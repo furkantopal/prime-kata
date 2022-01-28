@@ -14,7 +14,12 @@ describe("Roman test", () => {
     [8, "VIII"],
     [9, "IX"],
     [10, "X"],
-    [11, "XI"]
+    [11, "XI"],
+    [12, "XII"],
+    [14, "XIV"],
+    [15, "XV"],
+    [19, "XIX"],
+    [20, "XX"],
   ])(".getRepresentation(%i, %s)", (input, expexted) => {
     expect(roman.getRepresentation(input)).toEqual(expexted);
   });
