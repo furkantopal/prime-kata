@@ -9,7 +9,13 @@ describe("Roman test", () => {
     [3, "III"],
     [4, "IV"],
     [5, "V"],
-  ])(".prime(%i, %s)", (input, expexted) => {
+    [6, "VI"],
+    [7, "VII"],
+    [8, "VIII"],
+    [9, "IX"],
+    [10, "X"],
+    [11, "XI"]
+  ])(".getRepresentation(%i, %s)", (input, expexted) => {
     expect(roman.getRepresentation(input)).toEqual(expexted);
   });
 });
