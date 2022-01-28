@@ -1,13 +1,14 @@
 import { Prime } from "../main/prime";
 
 describe("Prime test", () => {
-  it("should give prime factors of 1", () => {
-    let prime: Prime = new Prime();
-    expect(prime.getFactors(1)).toEqual([]);
-  });
+  let prime: Prime = new Prime();
 
-  it("should give prime factors of 2", () => {
-    let prime: Prime = new Prime();
-    expect(prime.getFactors(2)).toEqual([2]);
+  it.each([
+    [1, []],
+    [2, [2]],
+    [3, [3]],
+    [4, [2, 2]],
+  ])(".prime(%i, %s)", (input, expexted) => {
+    expect(prime.getFactors(input)).toEqual(expexted);
   });
 });

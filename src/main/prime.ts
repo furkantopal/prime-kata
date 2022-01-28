@@ -1,5 +1,9 @@
 export class Prime {
   getFactors(input: number): number[] {
-    return input === 1 ? [] : [2];
+    if (input === 1) {
+      return [];
+    } else {
+      return input === 2 ? [2] : [3];
+    }
   }
 }
